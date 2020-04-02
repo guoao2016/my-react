@@ -12,7 +12,6 @@ export function Welcome1(props){
 
 
 
-
 // 基于类的组件
 
 // export class Welcome2 extends Component(){

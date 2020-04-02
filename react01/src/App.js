@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Welcome1 } from './components/CompType';
+import { Welcome1 } from './components/Welcome';
 import { Clock } from './components/Clock';
+import { StateTestHook } from './components/StateTestHook';
 import { StateTest } from './components/StateTest';
 import { CartSample } from './components/CartSample';
 
@@ -16,7 +17,7 @@ class App extends Component{
     const name = 'jerry';
     const user = {firstName: 'jack',lastName: 'jerry'}
     return (
-      <div>
+      <div class="content">
         {/* 表达式 */}
         <h1>{name}</h1>
         <h1>{formatName(user)}</h1>
@@ -28,12 +29,13 @@ class App extends Component{
 
 
         {/*使用其他组件 */}
-        <Welcome1 name ="some content"></Welcome1>
-        {/* <Welcome2 name ="some content">></Welcome2> */}
+        <Welcome1 name="hello, react"></Welcome1>
+}
 
-        {/* State和状态setState */}
+        {/* State和状态setState */}d
         <Clock></Clock>
         <StateTest></StateTest>
+        <StateTestHook></StateTestHook>
         <CartSample></CartSample>
       </div>
     )
