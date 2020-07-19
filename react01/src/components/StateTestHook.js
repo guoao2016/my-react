@@ -8,7 +8,7 @@ export function StateTestHook(){
 
 const [counter, setCounter] = useState(0);
 return (
-    <div>
+    <div className="test-hook">
         <button onClick={() => {setCounter(counter -1 )}}> - </button>
         <span>{counter}</span>
         <button onClick={() => {setCounter(counter +1 )}}> + </button>
