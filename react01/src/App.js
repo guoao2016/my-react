@@ -5,6 +5,7 @@ import { Welcome1, Welcome2 } from './components/CompType';
 import Clock from './components/Clock'
 import StateTest from './components/StateTest';
 import CartSample from './components/CartSample';
+import Lifecycle from './components/Lifecycle';
 
 
 // import { Welcome2, Welcome1 } from './components/ComType';
@@ -17,6 +18,10 @@ function formatName(user){
 } 
 
 class App extends Component{
+  state = {prop: 'some prop'}
+  componentDidMount(){
+    this.setState({prop: 'some prop--next'})
+  }
   render(){
     const name = 'jerry';
     const user = {firstName: 'tom', lastName: 'jerry'};
@@ -44,6 +49,9 @@ class App extends Component{
 
         {/* 条件渲染 */}
         <CartSample></CartSample>
+
+        {/* 生命周期 */}
+        <Lifecycle prop="some prop"></Lifecycle>
       </div>
     )
   }
